@@ -127,7 +127,7 @@ function searchcity(x) {
 
 function makeoffline() {
   let notify = document.querySelector("#header");
-  notify.textContent = "You are not connected with internate";
+  notify.textContent = "You are not connected with internet";
   notify.style.display = "block";
   notify.style.backgroundColor = "#e40a0a";
   console.log(notify);
@@ -215,6 +215,7 @@ function getDate() {
     "aug",
     "sep",
     "oct",
+    "Nov",
     "dec",
   ];
   let today = new Date();
