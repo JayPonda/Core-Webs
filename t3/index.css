@@ -192,13 +192,13 @@ th, .th{
     color: gold;
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 420px) {
     .header{
-        font-size: 50px;
+        font-size: 40px;
     }
 
     .records{
-        font-size: 30px;
+        font-size: 23px;
     }
     
 }
