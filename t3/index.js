@@ -84,13 +84,13 @@ function newgame(y, x) {
 
   if (y == 1) {
     game.win++;
-    game.score.push({ l: 1 });
+    game.score.push(1);
   } else if (y == -1) {
     game.lose++;
-    game.score.push({ l: -1 });
+    game.score.push(-1);
   } else {
-    records.term != 0 ? (game.west++, game.score.push({ l: 0 })) : 0;
-    if (x != null && records.term != 0) addRow(0, true);
+    records.term != 0 ? (game.west++, game.score.push(0)) : 0;
+    if (x != null && records.term != 0) addRow(true);
   }
 
   scoreBord();
@@ -188,23 +188,26 @@ function addMove(x, y) {
       alert(b == 1? "i win" : "you win");
       scoreBord();
       newgame(b);
-      addRow(b);
+      addRow(false);
     } else if (records.term == 9) {
       alert("tia");
       newgame(0);
-      addRow(0);
+      addRow(false);
     }
   }, 500);
 }
 
 
-function addRow(x, y){
+function addRow(y){
+  
   var tbody = $('table').getElementsByTagName('tbody')[0];
 
   var newRow = tbody.insertRow();
 
   var i = newRow.insertCell();
   i.textContent = game.score.length; 
+  let x = game.score[game.score.length - 1];
+  
   var r1 = newRow.insertCell();
   var r2 = newRow.insertCell();
   var r3 = newRow.insertCell();
@@ -255,7 +258,6 @@ function active(){
 
 function resetrows(){
   let y = $("table").getElementsByTagName("tbody")[0];
-
   y.textContent = "";
 
   var newRow = y.insertRow();
