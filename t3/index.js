@@ -56,6 +56,7 @@ function resetgame() {
 }
 
 function resetBord(k) {
+  console.log(game.score);
   for (let i = 1; i <= 3; i++) {
     c = ".col" + i;
     for (let j = 1; j <= 3; j++) {
@@ -88,8 +89,7 @@ function newgame(y, x) {
     game.lose++;
     game.score.push({ l: -1 });
   } else {
-    records.term != 0 ? game.west++ : 0;
-    game.score.push({ l: 0 });
+    records.term != 0 ? (game.west++, game.score.push({ l: 0 })) : 0;
     if (x != null && records.term != 0) addRow(0, true);
   }
 
@@ -209,27 +209,32 @@ function addRow(x, y){
   var r2 = newRow.insertCell();
   var r3 = newRow.insertCell();
   if(x == 1){
-    r1.textContent = 'W';
+    r1.textContent = '\u2713';
     y ? r1.style.color = 'red': 0;
     r2.textContent = "";
     r3.textContent = "";
   }
   else if(x == -1){
     r1.textContent = "";
-    r2.textContent = "W";
+    r2.textContent = "\u2713";
     y ? (r2.style.color = "red") : 0;
     r3.textContent = "";
   }
   else{
     r1.textContent = "";
     r2.textContent = "";
-    r3.textContent = "W";
+    r3.textContent = "\u2713";
     y ? (r3.style.color = "red") : 0;
   }
 }
 
 function active(){
+  let b = $("#active");
   if (!records.iScore){
+    b.textContent = 'show board';
+    b.style.color = "white";
+    b.style.backgroundColor = "rgb(96, 175, 96)";
+    
     $(".col1").style.display = "none";
     $(".col2").style.display = "none";
     $(".col3").style.display = "none";
@@ -237,6 +242,9 @@ function active(){
     records.iScore = !records.iScore;
   } 
   else{
+    b.textContent = "show score";
+    b.style.color = "black";
+    b.style.backgroundColor = "white";
     $(".col1").style.display = "inline-flex";
     $(".col2").style.display = "inline-flex";
     $(".col3").style.display = "inline-flex";
