@@ -7,6 +7,8 @@
     <title>Mobile.Prototype</title>
     <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="mainScreen.css" />
+    <link rel="stylesheet" href="homeScreen.css">
+    
     
     <link
       rel="stylesheet"
@@ -85,6 +87,124 @@
 
                               <!-- default screen -> home screen -->
                               <div class="homeScreen">
+
+                                <style>
+                                  .dateAndTime{
+                                    padding:  10px 0;
+                                    display: flex;
+                                    flex-direction: row;
+                                    justify-content: space-around;
+                                  }
+
+                                  .showDateTime, .showWedtherInfo{
+                                    height: 140px;
+                                    flex-grow: 2;
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                  }
+
+                                  .showWedtherInfo{
+                                    flex-grow: 1;
+                                  }
+
+                                  .showTime, .showDate{
+                                    height: 60px;
+                                    font-size: 40px;
+                                    font-weight: 700;
+                                    font-family: fantasy;
+                                    padding: 10px;
+                                  }
+
+                                  .showDate{
+                                    height: 20px;
+                                    font-family: sans-serif;
+                                    font-size: 15px;
+                                    font-weight: 500;
+                                    padding: 5px;
+                                  }
+
+                                  .mainWedtherInfoIcn, .WedtherDetail, .wedtherTemp{
+                                    height: 50px;
+                                    width: 100%;
+                                    text-align: right;
+                                    
+                                  }
+
+                                  .WedtherDetail, .wedtherTemp{
+                                    height: 30px;
+                                    font-weight: 700;
+                                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                                  }
+
+                                   .wedtherTemp{
+                                    height: 20px;
+                                    font-weight: 500;
+                                    font-size: 15px;
+                                  }
+
+                                  .wedtherIcn{
+                                    margin-right: 10px;
+                                    margin-top: 5px;
+                                    font-size: 45px;
+                                    float: right;
+                                  }
+
+                                  #condition, #temparature, #hase{
+                                    padding-right: 10px;
+                                  }
+                                </style>
+
+                                <!-- start date and time modual-->
+                                <div class = "dateAndTime">
+
+                                  <div class="showDateTime">
+                                      
+                                      <div class="showTime">
+                                        <span id="Btime">05:55 pm</span>
+                                      </div>
+                                      <div class="showDate">
+                                        <span id="Bdate">sun, 27 September</span><br>
+                                        <span id="Bnotes">World Tourism Day</span>
+                                      </div>
+                                  </div>
+
+                                  <div class="showWedtherInfo">
+                                    <div class="mainWedtherInfoIcn">
+                                      <i class="fa fa-slack wedtherIcn"></i>
+                                    </div>
+                                    <div class="WedtherDetail">
+                                      <span id="condition">thunderstorm</span>
+                                    </div>
+                                    <div class="wedtherTemp">
+                                      <span id="temparature">28&#176;C</span>
+                                      <span id="hase">AQI 9</span>
+                                    </div>
+                                  </div>
+
+                                </div>
+                                <!-- end date and time modual-->
+
+                                <!--start manue bar-->
+                                <div class="menus">
+                                  <div class="icnBundel">
+                                    <div class="callbook">
+                                      <i class="fa fa-phone" style="font-size: 38px; color: rgb(27, 214, 2); width: 100%; text-align: center; margin-top: 3px; "></i>
+                                    </div>
+                                    <div class="messagebook">
+                                      <i class="fa fa-envelope" style="font-size: 38px; color: rgb(194, 216, 0); width: 100%; text-align: center; "></i>
+                                    </div>
+                                    <div class="camera">
+                                      <i class="fa fa-camera" style="font-size: 37px; color: rgb(88, 118, 121); width: 100%; text-align: center; margin-top: 2px;"></i>
+                                    </div>
+                                    <div class="setting">
+                                      <i class="fa fa-cog" style="font-size: 40px; color: rgb(46, 15, 56); width: 100%; text-align: center; "></i>
+                                    </div>
+                                    <div class="home">
+                                      <i class="fa fa-home" style="font-size: 40px; color: rgb(8, 86, 255); width: 100%; text-align: center; "></i>
+                                    </div>
+                                  </div>
+                                </div>
 
                               </div>
                               <!-- end home screen-->
