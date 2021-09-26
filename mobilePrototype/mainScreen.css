@@ -1,67 +1,72 @@
-.innerFrame{
-    background-image: url('https://wallpaper.dog/large/10925777.jpg');
+.innerFrame {
+  background-image: url("https://wallpaper.dog/large/10925777.jpg");
 }
 
-.mainScreen{
-    position: absolute;
-    height: 616px;
-    width: 310px;
+/* if you want to full screen then change height to x + 40 and top = 0 -> x + 40 + 30*/
 
-    
+.mainScreen {
+  position: absolute;
+  top: 30px;
+  height: 570px;
+  width: 310px;
+
+  /*border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;*/
 }
 
-.defaultManuBar{
-    position:absolute;
-    bottom: 0;
-    height: 100px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+.defaultManuBar {
+  position: absolute;
+  bottom: 0;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-.menubar{
-    position: absolute;
-    height: 50px;
-    width: 300px;
-    padding: 5px;
-    display: flex;
-    justify-content:space-around;
+.menubar {
+  position: absolute;
+  height: 50px;
+  width: 300px;
+  padding: 5px;
+  display: flex;
+  justify-content: space-around;
 }
 
-.menubar .icnbox{
-    position: relative;
-    height: 42px;
-    width: 42px;
-    margin: 5px;
+.menubar .icnbox {
+  position: relative;
+  height: 42px;
+  width: 42px;
+  margin: 5px;
 
-    background-color: rgb(0, 255, 200);
-    border-radius: 10px;
+  background-color: rgb(0, 255, 200);
+  border-radius: 10px;
 }
 
-.menubar .icnbox i{
-    width: 100%;
-    text-align: center;
-    color: white
+.menubar .icnbox i {
+  width: 100%;
+  text-align: center;
+  color: white;
 }
 
-.backnevbar{
-    position: absolute;
-    height: 40px;
-    width: 100%;
-    bottom: 0;
-    background-color: rgb(0, 0, 0, 0.5);
+.backnevbar {
+  position: absolute;
+  height: 40px;
+  width: 100%;
+  bottom: 0;
+  background-color: rgb(0, 0, 0, 0.5);
 }
 
-.backnevbar .fundamentalAss{
-    margin: 10px;
-    display: flex;
-    justify-content:space-around;
-    color: aliceblue;
+.backnevbar .fundamentalAss {
+  margin: 10px;
+  display: flex;
+  justify-content: space-around;
+  color: aliceblue;
 }
 
-.showAllScreen, .goToHome, .back{
-    height: 25px;
-    width: 25px;
-    text-align: center;
-    
+.showAllScreen,
+.goToHome,
+.back {
+  height: 25px;
+  width: 25px;
+  text-align: center;
 }
