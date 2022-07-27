@@ -25,3 +25,11 @@
 - this project gives information about current weather condition based on input location
 - it uses asyn JavaScript to do API call
 - functionalities like input location as name or latitude-longitude and get information like temperature, humidity, preasure and network availability
+
+### :handshake: Client-server-program
+
+- this is a demonstration of client-server convertion with async JavaScript request with the use of XMLHttpRequest and php response.
+- test.html is working as frontend which sends request and receive response and render.
+- test.php is working as backend which receive request, perform validations and respond back to the client.
+- validatation.php is the file in which logic for the validation are written.
+- it contains simple backend with `PHP`
